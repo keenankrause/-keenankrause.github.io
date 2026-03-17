@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keenan Krause</title>
+  <meta name="description" content="Strategy and partnerships professional working at the intersection of policy, capital, and innovation to support communities and drive impact globally." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #F7F6F2;
+      --surface:   #EEECEA;
+      --ink:       #1C1C1A;
+      --ink-muted: #6B6B67;
+      --green:     #2D6A4F;
+      --green-lt:  #D8EDE4;
+      --border:    rgba(28,28,26,0.12);
+      --serif:     'Cormorant Garamond', Georgia, serif;
+      --sans:      'DM Sans', system-ui, sans-serif;
+      --max:       720px;
+      --nav-h:     64px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--nav-h);
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+    }
+
+    .nav-name {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--green); }
+
+    /* ── SHARED LAYOUT ── */
+    .section {
+      padding: clamp(4rem, 10vw, 7rem) clamp(1.5rem, 5vw, 4rem);
+      max-width: calc(var(--max) + clamp(3rem, 10vw, 8rem));
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-label::after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 2.5rem;
+      background: var(--green);
+      opacity: 0.5;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--serif);
+      font-weight: 500;
+      line-height: 1.2;
+      color: var(--ink);
+    }
+
+    /* ── HERO ── */
+    #home {
+      padding-top: clamp(5rem, 14vw, 9rem);
+      padding-bottom: clamp(4rem, 10vw, 7rem);
+      padding-left: clamp(1.5rem, 5vw, 4rem);
+      padding-right: clamp(1.5rem, 5vw, 4rem);
+      max-width: calc(var(--max) + clamp(3rem, 10vw, 8rem));
+      margin: 0 auto;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-eyebrow {
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-name {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      font-weight: 500;
+      line-height: 1.0;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 2rem;
+    }
+
+    .hero-name em {
+      font-style: italic;
+      color: var(--green);
+    }
+
+    .hero-tagline {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--ink-muted);
+      max-width: 540px;
+      line-height: 1.55;
+      margin-bottom: 2.75rem;
+      border-left: 2px solid var(--green);
+      padding-left: 1.25rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      padding: 0.65rem 1.4rem;
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: #fff;
+      border: 1px solid var(--green);
+    }
+    .btn-primary:hover { background: #235740; border-color: #235740; }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { border-color: var(--ink-muted); }
+
+    /* ── WRITING ── */
+    #writing { border-bottom: 1px solid var(--border); }
+
+    .writing-intro {
+      font-size: 1.05rem;
+      color: var(--ink-muted);
+      max-width: 540px;
+      margin-bottom: 3rem;
+      line-height: 1.75;
+    }
+
+    .writing-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .writing-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s;
+      position: relative;
+    }
+
+    .writing-item::after {
+      content: '↗';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1rem;
+      color: var(--ink-muted);
+      opacity: 0;
+      transition: opacity 0.2s, right 0.2s;
+    }
+
+    .writing-item:hover::after { opacity: 1; right: 0.25rem; }
+
+    .writing-item:hover .writing-title { color: var(--green); }
+
+    .writing-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+
+    .writing-tag {
+      background: var(--green-lt);
+      color: var(--green);
+      padding: 0.15rem 0.55rem;
+      border-radius: 2px;
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+    }
+
+    .writing-title {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.3;
+      color: var(--ink);
+      transition: color 0.2s;
+    }
+
+    .writing-desc {
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+      max-width: 480px;
+      line-height: 1.6;
+    }
+
+    .writing-item:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── ABOUT ── */
+    #about { border-bottom: 1px solid var(--border); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .about-bio p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+    }
+
+    .about-bio p:last-child { margin-bottom: 0; }
+
+    .about-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .sidebar-block h3 {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 0.85rem;
+    }
+
+    .sidebar-block ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .sidebar-block li {
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+      padding-left: 0.85rem;
+      position: relative;
+    }
+
+    .sidebar-block li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-size: 0.75rem;
+    }
+
+    .resume-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--green);
+      text-decoration: none;
+      border-bottom: 1px solid var(--green-lt);
+      padding-bottom: 0.1rem;
+      transition: border-color 0.2s;
+    }
+
+    .resume-link:hover { border-color: var(--green); }
+
+    /* ── CONTACT ── */
+    .contact-intro {
+      font-family: var(--serif);
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--ink);
+      max-width: 500px;
+      line-height: 1.4;
+      margin-bottom: 3rem;
+    }
+
+    .contact-form {
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-field label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+
+    .form-field input,
+    .form-field textarea {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 0.7rem 0.9rem;
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--ink);
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+
+    .form-field input:focus,
+    .form-field textarea:focus {
+      border-color: var(--green);
+    }
+
+    .form-field textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    .form-submit {
+      align-self: flex-start;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 2rem clamp(1.5rem, 5vw, 4rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-copy {
+      font-size: 0.8rem;
+      color: var(--ink-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 0.8rem;
+      color: var(--ink-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--green); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 620px) {
+      .nav-links { gap: 1.25rem; }
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+
+    @media (max-width: 440px) {
+      .nav-links li:nth-child(n+3) { display: none; }
+    }
+
+    /* ── FADE IN ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-eyebrow { animation: fadeUp 0.6s ease both; }
+    .hero-name    { animation: fadeUp 0.6s 0.1s ease both; }
+    .hero-tagline { animation: fadeUp 0.6s 0.2s ease both; }
+    .hero-cta     { animation: fadeUp 0.6s 0.3s ease both; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#home" class="nav-name">Keenan Krause</a>
+    <ul class="nav-links">
+      <li><a href="#writing">Writing</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home">
+    <p class="hero-eyebrow">New York City</p>
+    <h1 class="hero-name">Keenan<br /><em>Krause</em></h1>
+    <p class="hero-tagline">Working at the intersection of policy, capital, and innovation to support communities and drive impact globally.</p>
+    <div class="hero-cta">
+      <a href="#writing" class="btn btn-primary">Read my work</a>
+      <a href="#contact" class="btn btn-secondary">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- WRITING -->
+  <section id="writing" class="section">
+    <p class="section-label">Writing</p>
+    <p class="writing-intro">Research, policy analysis, and ideas at the intersection of global development, migration, and private capital.</p>
+
+    <div class="writing-list">
+
+      <!-- ITEM 1 — PDF upload example -->
+      <a href="/pdfs/Global_Migration_Position_Paper.pdf" target="_blank" class="writing-item">
+        <div class="writing-meta">
+          <span>2024</span>
+          <span class="writing-tag">Policy Paper</span>
+          <span class="writing-tag">PDF</span>
+        </div>
+        <div class="writing-title">Global Migration Position Paper</div>
+        <div class="writing-desc">Argues that migration is intrinsic to development — not a symptom of its failure — and outlines a framework for policy that reflects this reality.</div>
+      </a>
+
+      <!-- ITEM 2 — Article link example -->
+      <a href="https://example.com/your-article" target="_blank" class="writing-item">
+        <div class="writing-meta">
+          <span>2023</span>
+          <span class="writing-tag">Article</span>
+        </div>
+        <div class="writing-title">Add your article title here</div>
+        <div class="writing-desc">A short description of what this piece is about and where it was published. Update the link and this text.</div>
+      </a>
+
+      <!-- ITEM 3 — Another example -->
+      <a href="/pdfs/your-paper.pdf" target="_blank" class="writing-item">
+        <div class="writing-meta">
+          <span>2022</span>
+          <span class="writing-tag">Research</span>
+          <span class="writing-tag">PDF</span>
+        </div>
+        <div class="writing-title">Add another piece here</div>
+        <div class="writing-desc">Replace this placeholder with a brief description of your paper or report.</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <p class="section-label">About</p>
+    <div class="about-grid">
+      <div class="about-bio">
+        <p>I work at the intersection of policy, private capital, and innovation — with the goal of building the systems and partnerships that let communities shape their own futures.</p>
+        <p>At Chemonics International, I support the launch of the Alchemi Investor Collective, working to connect mission-aligned investors with the impact they want to create. Before that, I spent several years at USAID, where I led policy work on migration, humanitarian assistance, and cross-bureau coordination.</p>
+        <p>My research and writing center on migration as a development driver, not a failure of it — and on what it takes to build policy frameworks that hold up in practice.</p>
+        <p>I hold a Master of Public Policy from the University of Chicago's Harris School, and an Honours BA from the University of Toronto in Diaspora and Transnational Studies and International Relations.</p>
+        <a href="/pdfs/Keenan_Krause_Resume.pdf" target="_blank" class="resume-link">Download resume ↓</a>
+      </div>
+
+      <div class="about-sidebar">
+        <div class="sidebar-block">
+          <h3>Focus areas</h3>
+          <ul>
+            <li>Private capital mobilization</li>
+            <li>Migration and development policy</li>
+            <li>Impact investing and ventures</li>
+            <li>Strategic partnerships</li>
+            <li>Innovation in global programs</li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <h3>Experience</h3>
+          <ul>
+            <li>Chemonics International</li>
+            <li>U.S. Agency for International Development</li>
+            <li>University of Chicago Harris School</li>
+            <li>Laidlaw Foundation</li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <h3>Education</h3>
+          <ul>
+            <li>MPP — University of Chicago</li>
+            <li>BA — University of Toronto</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <p class="section-label">Contact</p>
+    <p class="contact-intro">Interested in collaborating, publishing, or just connecting?</p>
+
+    <!--
+      FORMSPREE SETUP:
+      1. Go to https://formspree.io and create a free account
+      2. Create a new form — Formspree will give you an endpoint like:
+         https://formspree.io/f/abcdefgh
+      3. Replace "YOUR_FORM_ID" below with your actual form ID (e.g. "abcdefgh")
+      That's it — submissions go straight to your inbox, no email shown on site.
+    -->
+    <form
+      class="contact-form"
+      action="https://formspree.io/f/YOUR_FORM_ID"
+      method="POST"
+    >
+      <div class="form-field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your name" />
+      </div>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="your@email.com" />
+      </div>
+      <div class="form-field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required placeholder="What's on your mind?"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary form-submit">Send message</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-copy">&copy; 2025 Keenan Krause</p>
+    <ul class="footer-links">
+      <li><a href="https://linkedin.com/in/keenankrause" target="_blank">LinkedIn</a></li>
+      <li><a href="#writing">Writing</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
