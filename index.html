@@ -3,621 +3,708 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Keenan Krause</title>
-  <meta name="description" content="Strategy and partnerships professional working at the intersection of innovation, partnerships, and policy to support communities and drive impact globally." />
+  <title>Keenan Krause | Strategy and partnerships for new ideas</title>
+  <meta name="description" content="Keenan Krause helps organizations turn new ideas for social and economic problems into working operations and partnerships, using human-centered design. Based in New York City." />
+  <meta name="theme-color" content="#F4F5F7" />
+  <link rel="canonical" href="https://keenankrause.com/" />
+
+  <!-- Link previews (LinkedIn, Slack, etc.). Add an og:image once you have a 1200x630 image. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Keenan Krause | Strategy and partnerships for new ideas" />
+  <meta property="og:description" content="I turn untested ideas into working operations and partnerships, for organizations willing to take a real risk." />
+  <meta property="og:url" content="https://keenankrause.com/" />
+  <!-- <meta property="og:image" content="https://keenankrause.com/images/og.png" /> -->
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232338D1'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23FFD23F'/%3E%3C/svg%3E" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Keenan Krause",
+    "url": "https://keenankrause.com",
+    "jobTitle": "Strategy and partnerships consultant",
+    "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY", "addressCountry": "US" },
+    "sameAs": ["https://www.linkedin.com/in/keenankrause"],
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "University of Chicago" },
+      { "@type": "CollegeOrUniversity", "name": "University of Toronto" }
+    ]
+  }
+  </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:        #F7F6F2;
-      --surface:   #EEECEA;
-      --ink:       #1C1C1A;
-      --ink-muted: #6B6B67;
-      --green:     #2D6A4F;
-      --green-lt:  #D8EDE4;
-      --border:    rgba(28,28,26,0.12);
-      --serif:     'Cormorant Garamond', Georgia, serif;
-      --sans:      'DM Sans', system-ui, sans-serif;
-      --max:       720px;
-      --nav-h:     64px;
+      --paper:  #F4F5F7;
+      --ink:    #0F1A33;
+      --ink-2:  #4A5468;
+      --cobalt: #2338D1;
+      --sun:    #FFD23F;
+      --line:   #CFD5E0;
+      --field:  #8A93A8;
+
+      --sans:  'Bricolage Grotesque', system-ui, sans-serif;
+      --serif: 'Source Serif 4', Georgia, serif;
+
+      --gutter: clamp(1.25rem, 4vw, 2.5rem);
+      --header-h: 4rem;
     }
 
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 1rem); }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
     body {
-      background: var(--bg);
+      background: var(--paper);
       color: var(--ink);
-      font-family: var(--sans);
-      font-size: 16px;
-      line-height: 1.7;
-      font-weight: 300;
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      height: var(--nav-h);
-      background: var(--bg);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 clamp(1.5rem, 5vw, 4rem);
-    }
-
-    .nav-name {
       font-family: var(--serif);
-      font-size: 1.15rem;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-      color: var(--ink);
-      text-decoration: none;
+      font-size: 1.125rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
+    ::selection { background: var(--sun); color: var(--ink); }
+
+    a { color: var(--cobalt); text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+    a:hover { text-decoration-thickness: 2px; }
+
+    :focus-visible { outline: 3px solid var(--cobalt); outline-offset: 3px; }
+
+    h1, h2, h3 { font-family: var(--sans); color: inherit; }
+    h2 {
+      font-size: clamp(1.9rem, 3.6vw, 2.75rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
     }
+    h3 { font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; }
 
-    .nav-links a {
-      font-size: 0.85rem;
-      font-weight: 400;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--ink-muted);
-      text-decoration: none;
-      transition: color 0.2s;
+    .wrap { width: min(100% - 2 * var(--gutter), 1120px); margin-inline: auto; }
+    .block { padding-block: clamp(4rem, 9vw, 7.5rem); }
+    .block--ruled { border-top: 1px solid var(--line); }
+    .lede { max-width: 56ch; color: var(--ink-2); margin-top: 1rem; }
+
+    .skip {
+      position: absolute; left: var(--gutter); top: -4rem;
+      background: var(--ink); color: #fff; padding: 0.6rem 1rem; z-index: 50;
+      font-family: var(--sans); font-weight: 600; border-radius: 4px;
     }
+    .skip:focus { top: 0.75rem; }
 
-    .nav-links a:hover { color: var(--green); }
-
-    /* ── SHARED LAYOUT ── */
-    .section {
-      padding: clamp(4rem, 10vw, 7rem) clamp(1.5rem, 5vw, 4rem);
-      max-width: calc(var(--max) + clamp(3rem, 10vw, 8rem));
-      margin: 0 auto;
-    }
-
-    .section-label {
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 2.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .section-label::after {
-      content: '';
-      display: block;
-      height: 1px;
-      width: 2.5rem;
-      background: var(--green);
-      opacity: 0.5;
-    }
-
-    h1, h2, h3 {
-      font-family: var(--serif);
-      font-weight: 500;
-      line-height: 1.2;
-      color: var(--ink);
-    }
-
-    /* ── HERO ── */
-    #home {
-      padding-top: clamp(5rem, 14vw, 9rem);
-      padding-bottom: clamp(4rem, 10vw, 7rem);
-      padding-left: clamp(1.5rem, 5vw, 4rem);
-      padding-right: clamp(1.5rem, 5vw, 4rem);
-      max-width: calc(var(--max) + clamp(3rem, 10vw, 8rem));
-      margin: 0 auto;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .hero-eyebrow {
-      font-size: 0.8rem;
-      font-weight: 400;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--ink-muted);
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-name {
-      font-family: var(--serif);
-      font-size: clamp(3rem, 8vw, 5.5rem);
-      font-weight: 500;
-      line-height: 1.0;
-      letter-spacing: -0.01em;
-      color: var(--ink);
-      margin-bottom: 2rem;
-    }
-
-    .hero-name em {
-      font-style: italic;
-      color: var(--green);
-    }
-
-    .hero-tagline {
-      font-family: var(--serif);
-      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
-      font-weight: 400;
-      font-style: italic;
-      color: var(--ink-muted);
-      max-width: 540px;
-      line-height: 1.55;
-      margin-bottom: 2.75rem;
-      border-left: 2px solid var(--green);
-      padding-left: 1.25rem;
-    }
-
-    .hero-cta {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
+    /* Buttons */
     .btn {
       display: inline-block;
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 400;
-      letter-spacing: 0.05em;
-      padding: 0.65rem 1.4rem;
-      border-radius: 2px;
-      transition: all 0.2s;
-    }
-
-    .btn-primary {
-      background: var(--green);
-      color: #fff;
-      border: 1px solid var(--green);
-    }
-    .btn-primary:hover { background: #235740; border-color: #235740; }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--ink);
-      border: 1px solid var(--border);
-    }
-    .btn-secondary:hover { border-color: var(--ink-muted); }
-
-    /* ── WRITING ── */
-    #writing { border-bottom: 1px solid var(--border); }
-
-    .writing-intro {
-      font-size: 1.05rem;
-      color: var(--ink-muted);
-      max-width: 540px;
-      margin-bottom: 3rem;
-      line-height: 1.75;
-    }
-
-    .writing-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    .writing-item {
-      display: flex;
-      flex-direction: column;
-      gap: 0.3rem;
-      padding: 1.5rem 0;
-      border-top: 1px solid var(--border);
-      text-decoration: none;
-      color: inherit;
-      transition: all 0.2s;
-      position: relative;
-    }
-
-    .writing-item::after {
-      content: '↗';
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
+      font-family: var(--sans);
+      font-weight: 600;
       font-size: 1rem;
-      color: var(--ink-muted);
-      opacity: 0;
-      transition: opacity 0.2s, right 0.2s;
+      line-height: 1;
+      text-decoration: none;
+      padding: 0.95rem 1.35rem;
+      border-radius: 4px;
+      border: 1.5px solid transparent;
+      cursor: pointer;
+      transition: background-color 0.15s, color 0.15s, border-color 0.15s;
     }
+    .btn--primary { background: var(--cobalt); color: #fff; }
+    .btn--primary:hover { background: var(--ink); }
+    .btn--ghost { border-color: var(--ink); color: var(--ink); background: transparent; }
+    .btn--ghost:hover { background: var(--ink); color: #fff; }
+    .btn--sun { background: var(--sun); color: var(--ink); }
+    .btn--sun:hover { background: #fff; }
+    .btn--small { padding: 0.7rem 1rem; font-size: 0.95rem; }
 
-    .writing-item:hover::after { opacity: 1; right: 0.25rem; }
-
-    .writing-item:hover .writing-title { color: var(--green); }
-
-    .writing-meta {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.75rem;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      color: var(--ink-muted);
+    /* Header */
+    .site-header {
+      position: sticky; top: 0; z-index: 20;
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
     }
-
-    .writing-tag {
-      background: var(--green-lt);
-      color: var(--green);
-      padding: 0.15rem 0.55rem;
-      border-radius: 2px;
-      font-size: 0.7rem;
-      letter-spacing: 0.05em;
+    .site-header .wrap {
+      height: var(--header-h);
+      display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
     }
-
-    .writing-title {
-      font-family: var(--serif);
-      font-size: 1.25rem;
-      font-weight: 500;
-      line-height: 1.3;
-      color: var(--ink);
-      transition: color 0.2s;
+    .wordmark {
+      font-family: var(--sans); font-weight: 700; font-size: 1.2rem;
+      letter-spacing: -0.01em; color: var(--ink); text-decoration: none;
     }
-
-    .writing-desc {
-      font-size: 0.9rem;
-      color: var(--ink-muted);
-      max-width: 480px;
-      line-height: 1.6;
+    .site-nav { display: flex; align-items: center; gap: 2rem; }
+    .site-nav ul { display: flex; gap: 1.75rem; list-style: none; }
+    .site-nav li a {
+      font-family: var(--sans); font-weight: 500; font-size: 0.98rem;
+      color: var(--ink-2); text-decoration: none;
     }
+    .site-nav li a:hover { color: var(--cobalt); }
+    @media (max-width: 760px) { .site-nav ul { display: none; } }
 
-    .writing-item:last-child {
-      border-bottom: 1px solid var(--border);
-    }
-
-    /* ── ABOUT ── */
-    #about { border-bottom: 1px solid var(--border); }
-
-    .about-grid {
+    /* Hero */
+    .hero { padding-block: clamp(3rem, 7vw, 5.5rem) clamp(3rem, 7vw, 5rem); }
+    .hero-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: start;
+      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: clamp(2.6rem, 5.8vw, 4.4rem);
+      font-weight: 700;
+      line-height: 1.03;
+      letter-spacing: -0.03em;
+    }
+    .hero-sub { margin-top: 1.5rem; max-width: 34em; font-size: 1.25rem; color: var(--ink-2); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 2.25rem; }
+    .hero-proof {
+      margin-top: 3rem; padding-top: 1.25rem;
+      border-top: 1px solid var(--line);
+      font-size: 1rem; color: var(--ink-2); max-width: 34em;
     }
 
-    .about-bio p {
-      font-size: 1rem;
-      line-height: 1.85;
-      color: var(--ink);
+    .sketch { margin: 0; }
+    .sketch svg { display: block; width: 100%; height: auto; overflow: visible; }
+    .sketch figcaption {
+      margin-top: 0.75rem; font-style: italic; font-size: 0.98rem; color: var(--ink-2); text-align: center;
+    }
+    .sketch text { font-family: var(--sans); fill: var(--ink); font-size: 15px; font-weight: 500; text-anchor: middle; }
+    .sketch .core-text { font-size: 14px; font-weight: 700; }
+    .sketch .node-title { font-size: 15px; font-weight: 700; }
+    .sketch .node-q { font-size: 12px; font-weight: 400; }
+    .sketch .built .node-q { fill: var(--ink-2); }
+
+    .sketch .ghost { opacity: 0.35; }
+    .sketch .ghost * { fill: none; stroke: var(--ink-2); stroke-width: 1.5; stroke-dasharray: 4 6; }
+    .sketch .built * { fill: none; stroke: var(--ink); stroke-width: 2.25; stroke-linecap: round; }
+    .sketch .built .link { stroke: var(--cobalt); }
+    .sketch .built .core { fill: var(--sun); }
+    .sketch .built text { stroke: none; fill: var(--ink); }
+
+    /* The one orchestrated moment: a rough sketch gets drawn into a clean diagram. */
+    @media (prefers-reduced-motion: no-preference) {
+      .sketch .draw {
+        stroke-dasharray: 1; stroke-dashoffset: 1;
+        animation: draw var(--t, 0.7s) cubic-bezier(0.4, 0, 0.2, 1) var(--d, 0s) forwards;
+      }
+      .sketch .core { fill-opacity: 0; animation: draw 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards, fade 0.7s ease 3.1s forwards; }
+      .sketch .lbl { opacity: 0; animation: fade 0.5s ease var(--d, 1.8s) forwards; }
+      .sketch .ghost { animation: ghost 1.2s ease 3.8s both; opacity: 0.8; }
+    }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes fade { to { opacity: 1; fill-opacity: 1; } }
+    @keyframes ghost { from { opacity: 0.8; } to { opacity: 0.35; } }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .sketch { max-width: 420px; margin-inline: auto; }
+    }
+
+    /* What I do */
+    .offers {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 2.5rem clamp(1.5rem, 3vw, 3rem); margin-top: 3rem; list-style: none;
+    }
+    .offers li { border-top: 3px solid var(--ink); padding-top: 1.25rem; }
+    .offers h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    .offers p { color: var(--ink); }
+    .offers .fit { margin-top: 1rem; font-style: italic; color: var(--ink-2); font-size: 1rem; }
+    @media (max-width: 900px) { .offers { grid-template-columns: 1fr; } }
+
+    /* How I work */
+    .steps {
+      list-style: none; counter-reset: step;
+      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 2rem; margin-top: 3.5rem; position: relative;
+    }
+    .steps::before {
+      content: ''; position: absolute; left: 1rem; right: 1rem; top: 1rem;
+      height: 1.5px; background: var(--ink);
+    }
+    .steps li { counter-increment: step; position: relative; }
+    .steps li::before {
+      content: counter(step);
+      position: relative; z-index: 1;
+      display: grid; place-items: center;
+      width: 2rem; height: 2rem; border-radius: 50%;
+      border: 1.5px solid var(--ink); background: var(--paper);
+      font-family: var(--sans); font-weight: 600; font-size: 0.9rem;
       margin-bottom: 1.25rem;
     }
-
-    .about-bio p:last-child { margin-bottom: 0; }
-
-    .about-sidebar {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
+    .steps li:first-child::before { background: var(--sun); }
+    .steps h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+    .steps p { font-size: 1.02rem; color: var(--ink-2); }
+    @media (max-width: 900px) {
+      .steps { grid-template-columns: 1fr; gap: 2rem; }
+      .steps::before { left: 1rem; right: auto; top: 1rem; bottom: 1rem; width: 1.5px; height: auto; }
+      .steps li { padding-left: 3.5rem; }
+      .steps li::before { position: absolute; left: 0; top: 0; margin: 0; }
     }
 
-    .sidebar-block h3 {
-      font-family: var(--sans);
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 0.85rem;
+    /* Band */
+    .band { background: var(--cobalt); color: #fff; }
+    .band :focus-visible { outline-color: var(--sun); }
+    .band h2 { max-width: 18ch; font-size: clamp(2.1rem, 4.6vw, 3.5rem); }
+    .band p { margin-top: 1.5rem; max-width: 40em; color: #E6E9FF; font-size: 1.2rem; }
+    .band .btn { margin-top: 2.25rem; }
+
+    /* Selected work */
+    .cases { margin-top: 3rem; }
+    .case {
+      display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+      gap: 1rem clamp(2rem, 5vw, 4rem);
+      padding-block: 2.25rem; border-top: 1px solid var(--line);
+    }
+    .case:last-child { border-bottom: 1px solid var(--line); }
+    .case h3 { font-size: 1.55rem; }
+    .case .org { margin-top: 0.5rem; font-family: var(--sans); font-size: 0.95rem; color: var(--ink-2); }
+    .case-body { max-width: 60ch; }
+    .case-body p + p { margin-top: 1rem; }
+    .case-links { margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; font-family: var(--sans); font-weight: 500; font-size: 1rem; }
+    @media (max-width: 760px) { .case { grid-template-columns: 1fr; } }
+
+    /* About */
+    .about { display: flex; gap: clamp(2rem, 5vw, 4rem); align-items: flex-start; margin-top: 2.5rem; }
+    .about figure { flex: 0 0 260px; margin: 0; }
+    .about figure img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px; background: var(--line); }
+    .about figure[hidden] { display: none; }
+    .about-text { flex: 1; max-width: 60ch; }
+    .about-text p + p { margin-top: 1.1rem; }
+    .facts { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--line); display: grid; gap: 1rem; font-size: 1rem; }
+    .facts dt { font-family: var(--sans); font-weight: 600; font-size: 0.95rem; }
+    .facts dd { color: var(--ink-2); }
+    @media (max-width: 760px) {
+      .about { flex-direction: column; }
+      .about figure { flex-basis: auto; width: min(260px, 100%); }
     }
 
-    .sidebar-block ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
+    /* Writing */
+    .pieces { margin-top: 2.5rem; }
+    .piece {
+      display: grid; grid-template-columns: 5rem minmax(0, 1fr); gap: 0.5rem 1rem;
+      padding-block: 1.4rem; border-top: 1px solid var(--line);
     }
+    .piece:last-child { border-bottom: 1px solid var(--line); }
+    .piece .year { font-family: var(--sans); font-weight: 500; color: var(--ink-2); padding-top: 0.2rem; }
+    .piece h3 { font-size: 1.2rem; }
+    .piece h3 a { color: var(--ink); text-decoration: none; }
+    .piece h3 a:hover { color: var(--cobalt); text-decoration: underline; }
+    .piece .kind { font-family: var(--sans); font-size: 0.92rem; color: var(--ink-2); margin-top: 0.15rem; }
+    .piece .desc { font-size: 1rem; color: var(--ink-2); margin-top: 0.5rem; max-width: 60ch; }
+    @media (max-width: 560px) { .piece { grid-template-columns: 1fr; } }
 
-    .sidebar-block li {
-      font-size: 0.9rem;
-      color: var(--ink-muted);
-      padding-left: 0.85rem;
-      position: relative;
+    /* Contact */
+    .contact-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(2rem, 6vw, 5rem); align-items: start; }
+    .contact-grid h2 { font-size: clamp(2.1rem, 4.4vw, 3.25rem); }
+    .contact-note { margin-top: 1.25rem; color: var(--ink-2); max-width: 30em; }
+    .contact-alt { margin-top: 1.5rem; font-size: 1rem; color: var(--ink-2); }
+
+    form { display: grid; gap: 1.25rem; }
+    .field { display: grid; gap: 0.4rem; }
+    .field label { font-family: var(--sans); font-weight: 600; font-size: 0.98rem; }
+    .field .opt { font-weight: 400; color: var(--ink-2); }
+    .field input, .field select, .field textarea {
+      width: 100%; font: inherit; font-size: 1.05rem; color: var(--ink);
+      background: #fff; border: 1.5px solid var(--field); border-radius: 4px;
+      padding: 0.75rem 0.9rem;
     }
+    .field textarea { min-height: 9rem; resize: vertical; }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--cobalt); outline: 3px solid rgba(35, 56, 209, 0.25); outline-offset: 0; }
+    .form-actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .form-status { font-family: var(--sans); font-weight: 500; }
+    .form-status[data-state="ok"] { color: #12663A; }
+    .form-status[data-state="error"] { color: #A12020; }
+    .hp { position: absolute; left: -9999px; }
+    @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
 
-    .sidebar-block li::before {
-      content: '—';
-      position: absolute;
-      left: 0;
-      color: var(--green);
-      font-size: 0.75rem;
-    }
-
-    .resume-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.85rem;
-      font-weight: 400;
-      color: var(--green);
-      text-decoration: none;
-      border-bottom: 1px solid var(--green-lt);
-      padding-bottom: 0.1rem;
-      transition: border-color 0.2s;
-    }
-
-    /* ── CONTACT ── */
-    .contact-intro {
-      font-family: var(--serif);
-      font-size: clamp(1.4rem, 3vw, 1.9rem);
-      font-weight: 400;
-      font-style: italic;
-      color: var(--ink);
-      max-width: 500px;
-      line-height: 1.4;
-      margin-bottom: 3rem;
-    }
-
-    .contact-form {
-      max-width: 480px;
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-
-    .form-field {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-    }
-
-    .form-field label {
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--ink-muted);
-    }
-
-    .form-field input,
-    .form-field textarea {
-      background: transparent;
-      border: 1px solid var(--border);
-      border-radius: 2px;
-      padding: 0.7rem 0.9rem;
-      font-family: var(--sans);
-      font-size: 0.95rem;
-      font-weight: 300;
-      color: var(--ink);
-      outline: none;
-      transition: border-color 0.2s;
-      width: 100%;
-    }
-
-    .form-field input:focus,
-    .form-field textarea:focus {
-      border-color: var(--green);
-    }
-
-    .form-field textarea {
-      resize: vertical;
-      min-height: 130px;
-    }
-
-    .form-submit {
-      align-self: flex-start;
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      padding: 2rem clamp(1.5rem, 5vw, 4rem);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .footer-copy {
-      font-size: 0.8rem;
-      color: var(--ink-muted);
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-    }
-
-    .footer-links a {
-      font-size: 0.8rem;
-      color: var(--ink-muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .footer-links a:hover { color: var(--green); }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 620px) {
-      .nav-links { gap: 1.25rem; }
-      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    }
-
-    @media (max-width: 440px) {
-      .nav-links li:nth-child(n+3) { display: none; }
-    }
-
-    /* ── FADE IN ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(18px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .hero-eyebrow { animation: fadeUp 0.6s ease both; }
-    .hero-name    { animation: fadeUp 0.6s 0.1s ease both; }
-    .hero-tagline { animation: fadeUp 0.6s 0.2s ease both; }
-    .hero-cta     { animation: fadeUp 0.6s 0.3s ease both; }
+    /* Footer */
+    .site-footer { border-top: 1px solid var(--line); padding-block: 2rem; font-size: 0.95rem; color: var(--ink-2); }
+    .site-footer .wrap { display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: space-between; }
+    .site-footer ul { display: flex; gap: 1.5rem; list-style: none; font-family: var(--sans); }
+    .site-footer a { color: var(--ink-2); }
+    .site-footer a:hover { color: var(--cobalt); }
   </style>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- NAV -->
-  <nav>
-    <a href="#home" class="nav-name">Keenan Krause</a>
-    <ul class="nav-links">
-      <li><a href="#writing">Writing</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO -->
-  <section id="home">
-    <p class="hero-eyebrow">New York City</p>
-    <h1 class="hero-name">Keenan<br /><em>Krause</em></h1>
-    <p class="hero-tagline">Working at the intersection of policy, capital, and innovation to support communities and drive impact globally.</p>
-    <div class="hero-cta">
-      <a href="#writing" class="btn btn-primary">Read my work</a>
-      <a href="#contact" class="btn btn-secondary">Get in touch</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="#top">Keenan Krause</a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#what-i-do">What I do</a></li>
+          <li><a href="#how-i-work">How I work</a></li>
+          <li><a href="#work">Selected work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#writing">Writing</a></li>
+        </ul>
+        <a class="btn btn--primary btn--small" href="#contact">Start a conversation</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <!-- WRITING -->
-  <section id="writing" class="section">
-    <p class="section-label">Writing</p>
-    <p class="writing-intro">Research, policy analysis, and ideas at the intersection of global development, migration, and capital mobilization.</p>
+  <main id="main">
 
-    <div class="writing-list">
-
-    <a href="https://sciencepolitics.org/2026/04/08/usaids-migration-policy-should-not-be-forgotten/" target="_blank" class="writing-item">
-        <div class="writing-meta">
-          <span>2026</span>
-          <span class="writing-tag">Op-Ed</span>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div>
+          <h1>I turn untested ideas into working operations and partnerships.</h1>
+          <p class="hero-sub">Strategy, partnerships, and human-centered design for organizations taking a real risk on a new approach to social and economic problems.</p>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="#contact">Start a conversation</a>
+            <a class="btn btn--ghost" href="#what-i-do">See what I do</a>
+          </div>
+          <!-- Update this line to match how you want to present current and past roles. -->
+          <p class="hero-proof">Experience at USAID and Chemonics International. Master of Public Policy, University of Chicago. Based in New York City.</p>
         </div>
-        <div class="writing-title">USAID's Migration Policy Should Not Be Forgotten</div>
-        <div class="writing-desc">Co-authored with Laurie Ashley in Science Politics. Argues that USAID's global migration policy (which recognized migration as intrinsic to development, not a failure of it) remains urgently relevant despite the agency's dismantling.</div>
-    </a>
-      
-      <!-- ITEM 1 — PDF upload example -->
-      <a href="/pdfs/Global_Migration_Position_Paper.pdf" target="_blank" class="writing-item">
-        <div class="writing-meta">
-          <span>2024</span>
-          <span class="writing-tag">Policy Paper</span>
-          <span class="writing-tag">PDF</span>
-        </div>
-        <div class="writing-title">Global Migration Position Paper</div>
-        <div class="writing-desc">Argues that migration is intrinsic to development and not a symptom of its failure. It outlines a framework for policy that reflects this reality.</div>
-      </a>
 
-     <!-- ITEM 2 — Another example -->
-      <a href="https://laidlawscholars.network/documents/ontario-s-language-education-for-newcomers-analyzing-a-paradoxical-bilingual-multiculturalism-policy" target="_blank" class="writing-item">
-        <div class="writing-meta">
-          <span>2020</span>
-          <span class="writing-tag">Research Report</span>
-        </div>
-        <div class="writing-title">Ontario’s Language Education for Newcomers</div>
-        <div class="writing-desc">Laidlaw Foundation-funded research examining Ontario's approach to language education for immigrants and newcomers, and what a more multicultural policy could look like.</div>
-      </a>
-      
-      <!-- ITEM 3 — Article link example -->
-      <a href="https://laidlawscholars.network/documents/refugees-identity-in-a-state-of-exception" target="_blank" class="writing-item">
-        <div class="writing-meta">
-          <span>2020</span>
-          <span class="writing-tag">Journal Article</span>
-        </div>
-        <div class="writing-title">Refugees' Identity in a State of Exception</div>
-        <div class="writing-desc">Published in Landmarks: The Journal of Undergraduate Geography. Examines the realities of refugees in Dadaab, Kenya to challenge common frameworks around refugee identity and belonging.</div>
-      </a>
+        <figure class="sketch">
+          <svg viewBox="0 0 520 460" role="img" aria-labelledby="sketch-title">
+            <title id="sketch-title">A rough dashed sketch that redraws itself as a clean diagram: six angles on one problem, funding, incentives, users, creators, rules, and evidence, each connected to a single plan at the center.</title>
 
+            <!-- Rough draft layer, slightly off-register -->
+            <g class="ghost" transform="translate(5 4) rotate(-1.5 260 230)" aria-hidden="true">
+              <circle cx="260" cy="232" r="46" />
+              <rect x="180" y="24" width="160" height="56" rx="6" />
+              <rect x="332" y="114" width="160" height="56" rx="6" />
+              <rect x="332" y="294" width="160" height="56" rx="6" />
+              <rect x="180" y="384" width="160" height="56" rx="6" />
+              <rect x="28" y="294" width="160" height="56" rx="6" />
+              <rect x="28" y="114" width="160" height="56" rx="6" />
+              <path d="M260 186 C 262 150, 258 115, 260 82" />
+              <path d="M300 208 C 318 196, 335 184, 352 172" />
+              <path d="M300 256 C 318 268, 335 280, 352 292" />
+              <path d="M260 278 C 258 315, 262 350, 260 382" />
+              <path d="M220 256 C 202 268, 185 280, 168 292" />
+              <path d="M220 208 C 202 196, 185 184, 168 172" />
+              <path d="M340 52 C 380 54, 405 80, 412 112" />
+              <path d="M492 150 C 512 200, 512 264, 492 314" />
+              <path d="M412 350 C 412 382, 385 410, 342 412" />
+              <path d="M108 350 C 108 382, 135 410, 178 412" />
+              <path d="M28 314 C 8 264, 8 200, 28 150" />
+              <path d="M108 112 C 115 80, 140 54, 180 52" />
+            </g>
+
+            <!-- Clean layer, drawn on load -->
+            <g class="built">
+              <circle class="draw core" pathLength="1" cx="260" cy="232" r="46" style="--d:0.1s" />
+              <text class="lbl core-text" style="--d:0.6s" x="260" y="237">one plan</text>
+              <rect class="draw" pathLength="1" x="180" y="24" width="160" height="56" rx="6" style="--d:0.4s" />
+              <path class="draw" pathLength="1" style="--d:0.8s" d="M260 186 C 262 150, 258 115, 260 82" />
+              <text class="lbl node-title" style="--d:0.9s" x="260" y="48">Funding</text>
+              <text class="lbl node-q" style="--d:0.9s" x="260" y="67">Who pays, and for what?</text>
+              <rect class="draw" pathLength="1" x="332" y="114" width="160" height="56" rx="6" style="--d:0.7s" />
+              <path class="draw" pathLength="1" style="--d:1.1s" d="M300 208 C 318 196, 335 184, 352 172" />
+              <text class="lbl node-title" style="--d:1.2s" x="412" y="138">Incentives</text>
+              <text class="lbl node-q" style="--d:1.2s" x="412" y="157">What moves people?</text>
+              <rect class="draw" pathLength="1" x="332" y="294" width="160" height="56" rx="6" style="--d:1.0s" />
+              <path class="draw" pathLength="1" style="--d:1.4s" d="M300 256 C 318 268, 335 280, 352 292" />
+              <text class="lbl node-title" style="--d:1.5s" x="412" y="318">Users</text>
+              <text class="lbl node-q" style="--d:1.5s" x="412" y="337">What do they need?</text>
+              <rect class="draw" pathLength="1" x="180" y="384" width="160" height="56" rx="6" style="--d:1.3s" />
+              <path class="draw" pathLength="1" style="--d:1.7s" d="M260 278 C 258 315, 262 350, 260 382" />
+              <text class="lbl node-title" style="--d:1.8s" x="260" y="408">Creators</text>
+              <text class="lbl node-q" style="--d:1.8s" x="260" y="427">What can be built?</text>
+              <rect class="draw" pathLength="1" x="28" y="294" width="160" height="56" rx="6" style="--d:1.6s" />
+              <path class="draw" pathLength="1" style="--d:2.0s" d="M220 256 C 202 268, 185 280, 168 292" />
+              <text class="lbl node-title" style="--d:2.1s" x="108" y="318">Rules</text>
+              <text class="lbl node-q" style="--d:2.1s" x="108" y="337">What is allowed?</text>
+              <rect class="draw" pathLength="1" x="28" y="114" width="160" height="56" rx="6" style="--d:1.9s" />
+              <path class="draw" pathLength="1" style="--d:2.3s" d="M220 208 C 202 196, 185 184, 168 172" />
+              <text class="lbl node-title" style="--d:2.4s" x="108" y="138">Evidence</text>
+              <text class="lbl node-q" style="--d:2.4s" x="108" y="157">What do we know?</text>
+              <path class="draw link" pathLength="1" style="--d:2.30s;--t:0.8s" d="M340 52 C 380 54, 405 80, 412 112" />
+              <path class="draw link" pathLength="1" style="--d:2.45s;--t:0.8s" d="M492 150 C 512 200, 512 264, 492 314" />
+              <path class="draw link" pathLength="1" style="--d:2.60s;--t:0.8s" d="M412 350 C 412 382, 385 410, 342 412" />
+              <path class="draw link" pathLength="1" style="--d:2.75s;--t:0.8s" d="M108 350 C 108 382, 135 410, 178 412" />
+              <path class="draw link" pathLength="1" style="--d:2.90s;--t:0.8s" d="M28 314 C 8 264, 8 200, 28 150" />
+              <path class="draw link" pathLength="1" style="--d:3.05s;--t:0.8s" d="M108 112 C 115 80, 140 54, 180 52" />
+            </g>
+          </svg>
+          <figcaption>Funding, incentives, users, and creators each see a different problem. I work across all of them.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- WHAT I DO -->
+    <section class="block block--ruled" id="what-i-do">
+      <div class="wrap">
+        <h2>What I do</h2>
+        <ul class="offers">
+          <li>
+            <h3>Build the tool or operation</h3>
+            <p>I design and stand up the systems a program runs on: workflows, data flows, and decision tools, shaped around the people who will use them every day. Your staff get something they adopt, not a document that sits on a shared drive.</p>
+            <p class="fit">A good fit when your idea works on a slide and now has to work across teams, sites, or countries.</p>
+          </li>
+          <li>
+            <h3>Build the partnership</h3>
+            <p>I structure and launch collaborations between institutions that don't usually work together, from the first conversation through the agreement, the governance, and the capital that makes it real.</p>
+            <p class="fit">A good fit when you need a funder, a company, and the people doing the work around one table with one plan.</p>
+          </li>
+          <li>
+            <h3>Pressure-test the plan against the evidence</h3>
+            <p>Before you commit budget, I dig into what the research says and what your own data show. Then I review your plan for what could fail, who it hasn't been tested with, and whether a simpler route gets the same result. You get a plain account of what is known, what is assumed, and what to test first.</p>
+            <p class="fit">A good fit when a big decision is coming and you want a candid read grounded in evidence.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- HOW I WORK -->
+    <section class="block block--ruled" id="how-i-work">
+      <div class="wrap">
+        <h2>How I work</h2>
+        <p class="lede">Human-centered design is a habit of starting with the people who will live with the result and checking my thinking against evidence. Most projects follow the same four steps.</p>
+        <ol class="steps">
+          <li>
+            <h3>Start with the people</h3>
+            <p>I spend the first stretch listening to the staff, partners, and communities who will live with the outcome, and reading what the research and your own data already say. Together they shape the brief.</p>
+          </li>
+          <li>
+            <h3>Sketch it small</h3>
+            <p>A one-page version, a rough workflow, or a mock-up lets everyone react to something real before money is committed.</p>
+          </li>
+          <li>
+            <h3>Test where it will run</h3>
+            <p>I try it in the real setting with the real constraints, measure what happens, and change it based on what breaks.</p>
+          </li>
+          <li>
+            <h3>Build and hand over</h3>
+            <p>Your team gets a working version, the documentation, and the know-how to run it without me.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- BAND -->
+    <section class="band block">
+      <div class="wrap">
+        <h2>I'm most useful when there is no template.</h2>
+        <p>The teams I work best with are taking a real risk: a new model, a first-of-its-kind partnership, a market they haven't operated in before. If your plan has a precedent to copy, you may not need me. If it doesn't, I'd like to hear about it.</p>
+        <a class="btn btn--sun" href="#contact">Tell me what you're building</a>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK -->
+    <section class="block" id="work">
+      <div class="wrap">
+        <h2>Selected work</h2>
+        <p class="lede">Three examples of how I approach a problem. I'm happy to share more detail in a conversation.</p>
+
+        <div class="cases">
+          <!--
+            To strengthen each case, add a third paragraph with what changed afterward
+            (a number, a decision, a program that launched), as long as you're free to share it.
+          -->
+          <article class="case">
+            <div>
+              <h3>Writing USAID's first global migration policy</h3>
+              <p class="org">U.S. Agency for International Development</p>
+            </div>
+            <div class="case-body">
+              <p>Migration was commonly treated as a sign that development had failed, and that framing shaped what programs could do about it.</p>
+              <p>I led the development of the agency's first global migration policy, built on the view that migration is intrinsic to development. I later co-authored an op-ed arguing the policy stays relevant after the agency's dismantling.</p>
+              <div class="case-links">
+                <a href="/pdfs/Global_Migration_Position_Paper.pdf" target="_blank" rel="noopener">Read the position paper</a>
+                <a href="https://sciencepolitics.org/2026/04/08/usaids-migration-policy-should-not-be-forgotten/" target="_blank" rel="noopener">Read the op-ed</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="case">
+            <div>
+              <h3>Reframing remittances as a resilience strategy</h3>
+              <p class="org">U.S. Agency for International Development</p>
+            </div>
+            <div class="case-body">
+              <p>Migrants send money home to their families and communities, and aid planning has mostly treated that flow as separate from its own work.</p>
+              <p>I developed strategies to reframe remittances as a channel toward local resilience, one that works alongside and outside traditional aid funding.</p>
+            </div>
+          </article>
+
+          <article class="case">
+            <div>
+              <h3>Opening new partnership conversations at UNGA and Climate Week</h3>
+              <p class="org">Chemonics International</p>
+            </div>
+            <div class="case-body">
+              <p>A convening is only worth the room if it changes who an organization is talking to. UN General Assembly week and Climate Week fill New York with events, so each one has to earn its audience.</p>
+              <!-- Add numbers here if you can share them: events run, attendance, partner meetings that followed. -->
+              <p>I ran multiple events across both weeks, designed to put Chemonics in front of audiences it hadn't reached before. The events brought in those new audiences, informed new dimensions of the organization's public positioning, and started new conversations with potential partners.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="block block--ruled" id="about">
+      <div class="wrap">
+        <h2>About</h2>
+        <div class="about">
+          <!-- Add a photo at images/keenan.jpg and it will appear here. Until then this block hides itself. -->
+          <figure>
+            <img src="images/keenan.jpg" alt="Keenan Krause" width="520" height="650" onerror="this.closest('figure').hidden = true" />
+          </figure>
+          <div class="about-text">
+            <p>I'm a strategist and partnership builder based in New York City. I was born and raised in Canada. I've spent my career inside the institutions that fund and run international development: first as a researcher and policy analyst at USAID, where I led the agency's first global migration policy, and then at Chemonics International, where I've worked on new models for bringing private capital to underserved communities.</p>
+            <p>In both places I kept seeing the same thing. Good ideas stall at the point where someone has to turn them into something people can run. That handoff is where I like to work. I bring a policy and research background, practical skills in financial modeling, monitoring and evaluation, and grant writing, and a habit of designing around the people who will use the result.</p>
+            <p>I hold a Master of Public Policy from the University of Chicago's Harris School and a BA from the University of Toronto in International Relations, Diaspora and Transnational Studies, and African Studies.</p>
+            <dl class="facts">
+              <div>
+                <dt>Skills</dt>
+                <dd>Partnership design, financial modeling, monitoring and evaluation, grant writing, policy research</dd>
+              </div>
+              <div>
+                <dt>Education</dt>
+                <dd>MPP, University of Chicago (International Policy and Development Economics). BA, University of Toronto.</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WRITING -->
+    <section class="block block--ruled" id="writing">
+      <div class="wrap">
+        <h2>Writing</h2>
+        <p class="lede">Research and policy writing on migration, development, and capital mobilization.</p>
+
+        <div class="pieces">
+          <article class="piece">
+            <span class="year">2026</span>
+            <div>
+              <h3><a href="https://sciencepolitics.org/2026/04/08/usaids-migration-policy-should-not-be-forgotten/" target="_blank" rel="noopener">USAID's Migration Policy Should Not Be Forgotten</a></h3>
+              <p class="kind">Op-ed in Science Politics, co-authored with Laurie Ashley</p>
+              <p class="desc">Argues that USAID's global migration policy, which treated migration as intrinsic to development, remains urgently relevant despite the agency's dismantling.</p>
+            </div>
+          </article>
+          <article class="piece">
+            <span class="year">2024</span>
+            <div>
+              <h3><a href="/pdfs/Global_Migration_Position_Paper.pdf" target="_blank" rel="noopener">Global Migration Position Paper</a></h3>
+              <p class="kind">Policy paper (PDF)</p>
+              <p class="desc">Argues that migration is intrinsic to development and not a symptom of its failure, and outlines a policy framework that reflects this.</p>
+            </div>
+          </article>
+          <article class="piece">
+            <span class="year">2020</span>
+            <div>
+              <h3><a href="https://laidlawscholars.network/documents/ontario-s-language-education-for-newcomers-analyzing-a-paradoxical-bilingual-multiculturalism-policy" target="_blank" rel="noopener">Ontario's Language Education for Newcomers</a></h3>
+              <p class="kind">Research report, funded by the Laidlaw Foundation</p>
+              <p class="desc">Examines Ontario's approach to language education for immigrants and newcomers, and what a more multicultural policy could look like.</p>
+            </div>
+          </article>
+          <article class="piece">
+            <span class="year">2020</span>
+            <div>
+              <h3><a href="https://laidlawscholars.network/documents/refugees-identity-in-a-state-of-exception" target="_blank" rel="noopener">Refugees' Identity in a State of Exception</a></h3>
+              <p class="kind">Journal article, Landmarks: The Journal of Undergraduate Geography</p>
+              <p class="desc">Examines the realities of refugees in Dadaab, Kenya to challenge common frameworks around refugee identity and belonging.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="block block--ruled" id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <h2>Tell me what you're building.</h2>
+          <p class="contact-note">Two or three sentences is plenty. I'll reply and we can work out whether it's a fit.</p>
+          <!-- To show a direct email, add it here, e.g. <p class="contact-alt">Or email <a href="mailto:you@example.com">you@example.com</a>.</p> -->
+          <p class="contact-alt">Prefer LinkedIn? <a href="https://www.linkedin.com/in/keenankrause" target="_blank" rel="noopener">linkedin.com/in/keenankrause</a></p>
+        </div>
+
+        <form id="contact-form" action="https://formspree.io/f/mpqyygyz" method="POST">
+          <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <input type="hidden" name="_subject" value="New inquiry from keenankrause.com" />
+
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="org">Organization <span class="opt">(optional)</span></label>
+            <input type="text" id="org" name="organization" autocomplete="organization" />
+          </div>
+          <div class="field">
+            <label for="stage">Where are you in the process?</label>
+            <select id="stage" name="stage">
+              <option value="">Choose one</option>
+              <option>I have an idea</option>
+              <option>I have a plan and want it tested</option>
+              <option>I'm already building and need help</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">What are you trying to build?</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn--primary" type="submit">Send message</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Keenan Krause</p>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/keenankrause" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <p class="section-label">About</p>
-    <div class="about-grid">
-      <div class="about-bio">
-        <p>I work at the intersection of strategy, innovation, and capital — with the goal of building the systems and partnerships that enable communities to shape their own futures.</p>
-        <p>With experience spanning public institutions and private sector organizations across global development, I've seen firsthand what it takes to turn ambitious ideas into programs that actually reach people. Today, at Chemonics International, I'm focused on exploring new models for how the development sector can continue to support communities around the world — drawing on capital, innovation, and partnership to help build a better shared future for all.</p>
-        <p>My research and writing center on migration as a development driver, not a failure of it — and on what it takes to build policy frameworks that hold up in practice.</p>
-        <p>I hold a Master of Public Policy from the University of Chicago's Harris School, and a BA from the University of Toronto in Diaspora and Transnational Studies and International Relations.</p>
-      </div>
-
-      <div class="about-sidebar">
-        <div class="sidebar-block">
-          <h3>Focus areas</h3>
-          <ul>
-            <li>Capital mobilization</li>
-            <li>Migration and development policy</li>
-            <li>Social enterprises</li>
-            <li>Strategic partnerships</li>
-            <li>Innovation in global programs</li>
-          </ul>
-        </div>
-        <div class="sidebar-block">
-          <h3>Experience</h3>
-          <ul>
-            <li>Chemonics International</li>
-            <li>U.S. Agency for International Development</li>
-            <li>University of Chicago Harris School</li>
-            <li>Laidlaw Foundation</li>
-          </ul>
-        </div>
-        <div class="sidebar-block">
-          <h3>Education</h3>
-          <ul>
-            <li>MPP — University of Chicago</li>
-            <li>BA — University of Toronto</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <p class="section-label">Contact</p>
-    <p class="contact-intro">Interested in collaborating, publishing, or just connecting?</p>
-
-    <!--
-      FORMSPREE SETUP:
-      1. Go to https://formspree.io and create a free account
-      2. Create a new form — Formspree will give you an endpoint like:
-         https://formspree.io/f/abcdefgh
-      3. Replace "YOUR_FORM_ID" below with your actual form ID (e.g. "abcdefgh")
-      That's it — submissions go straight to your inbox, no email shown on site.
-    -->
-    <form
-      class="contact-form"
-      action="https://formspree.io/f/mpqyygyz"
-      method="POST"
-    >
-      <div class="form-field">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required placeholder="Your name" />
-      </div>
-      <div class="form-field">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required placeholder="your@email.com" />
-      </div>
-      <div class="form-field">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required placeholder="What's on your mind?"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary form-submit">Send message</button>
-    </form>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p class="footer-copy">&copy; 2026 Keenan Krause</p>
-    <ul class="footer-links">
-      <li><a href="https://linkedin.com/in/keenankrause" target="_blank">LinkedIn</a></li>
-      <li><a href="#writing">Writing</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
   </footer>
 
+  <script>
+    // Send the form without leaving the page, and say plainly what happened.
+    (function () {
+      var form = document.getElementById('contact-form');
+      var status = document.getElementById('form-status');
+      if (!form || !window.fetch) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var button = form.querySelector('button[type="submit"]');
+        button.disabled = true;
+        status.removeAttribute('data-state');
+        status.textContent = 'Sending...';
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function (res) {
+          if (res.ok) {
+            form.reset();
+            status.setAttribute('data-state', 'ok');
+            status.textContent = 'Sent. Thank you, I\u2019ll be in touch.';
+          } else {
+            throw new Error('Request failed');
+          }
+        }).catch(function () {
+          status.setAttribute('data-state', 'error');
+          status.textContent = 'That didn\u2019t send. Please try again, or message me on LinkedIn.';
+        }).finally(function () {
+          button.disabled = false;
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
