@@ -174,26 +174,23 @@
     .sketch .node-q { font-size: 12px; font-weight: 400; }
     .sketch .built .node-q { fill: var(--ink-2); }
 
-    .sketch .ghost { opacity: 0.35; }
-    .sketch .ghost * { fill: none; stroke: var(--ink-2); stroke-width: 1.5; stroke-dasharray: 4 6; }
     .sketch .built * { fill: none; stroke: var(--ink); stroke-width: 2.25; stroke-linecap: round; }
     .sketch .built .link { stroke: var(--cobalt); }
+    .sketch .built rect { fill: var(--paper); }
     .sketch .built .core { fill: var(--sun); }
     .sketch .built text { stroke: none; fill: var(--ink); }
 
-    /* The one orchestrated moment: a rough sketch gets drawn into a clean diagram. */
+    /* The one orchestrated moment: the diagram draws itself, with the plan filling in last. */
     @media (prefers-reduced-motion: no-preference) {
       .sketch .draw {
         stroke-dasharray: 1; stroke-dashoffset: 1;
         animation: draw var(--t, 0.7s) cubic-bezier(0.4, 0, 0.2, 1) var(--d, 0s) forwards;
       }
-      .sketch .core { fill-opacity: 0; animation: draw 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards, fade 0.7s ease 3.1s forwards; }
+      .sketch .core { fill-opacity: 0; animation: draw 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards, fade 0.7s ease 3.4s forwards; }
       .sketch .lbl { opacity: 0; animation: fade 0.5s ease var(--d, 1.8s) forwards; }
-      .sketch .ghost { animation: ghost 1.2s ease 3.8s both; opacity: 0.8; }
     }
     @keyframes draw { to { stroke-dashoffset: 0; } }
     @keyframes fade { to { opacity: 1; fill-opacity: 1; } }
-    @keyframes ghost { from { opacity: 0.8; } to { opacity: 0.35; } }
 
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; }
@@ -362,65 +359,36 @@
 
         <figure class="sketch">
           <svg viewBox="0 0 520 460" role="img" aria-labelledby="sketch-title">
-            <title id="sketch-title">A rough dashed sketch that redraws itself as a clean diagram: six angles on one problem, funding, incentives, users, creators, rules, and evidence, each connected to a single plan at the center.</title>
+            <title id="sketch-title">A diagram that draws itself on load: six angles on one problem, funding, incentives, users, creators, rules, and evidence, arranged in a circle and each connected to a single plan at the center.</title>
 
-            <!-- Rough draft layer, slightly off-register -->
-            <g class="ghost" transform="translate(5 4) rotate(-1.5 260 230)" aria-hidden="true">
-              <circle cx="260" cy="232" r="46" />
-              <rect x="180" y="24" width="160" height="56" rx="6" />
-              <rect x="332" y="114" width="160" height="56" rx="6" />
-              <rect x="332" y="294" width="160" height="56" rx="6" />
-              <rect x="180" y="384" width="160" height="56" rx="6" />
-              <rect x="28" y="294" width="160" height="56" rx="6" />
-              <rect x="28" y="114" width="160" height="56" rx="6" />
-              <path d="M260 186 C 262 150, 258 115, 260 82" />
-              <path d="M300 208 C 318 196, 335 184, 352 172" />
-              <path d="M300 256 C 318 268, 335 280, 352 292" />
-              <path d="M260 278 C 258 315, 262 350, 260 382" />
-              <path d="M220 256 C 202 268, 185 280, 168 292" />
-              <path d="M220 208 C 202 196, 185 184, 168 172" />
-              <path d="M340 52 C 380 54, 405 80, 412 112" />
-              <path d="M492 150 C 512 200, 512 264, 492 314" />
-              <path d="M412 350 C 412 382, 385 410, 342 412" />
-              <path d="M108 350 C 108 382, 135 410, 178 412" />
-              <path d="M28 314 C 8 264, 8 200, 28 150" />
-              <path d="M108 112 C 115 80, 140 54, 180 52" />
-            </g>
-
-            <!-- Clean layer, drawn on load -->
             <g class="built">
+              <circle class="draw link" pathLength="1" cx="260" cy="232" r="178" transform="rotate(-90 260 232)" style="--d:2.4s;--t:1.4s" />
               <circle class="draw core" pathLength="1" cx="260" cy="232" r="46" style="--d:0.1s" />
               <text class="lbl core-text" style="--d:0.6s" x="260" y="237">one plan</text>
-              <rect class="draw" pathLength="1" x="180" y="24" width="160" height="56" rx="6" style="--d:0.4s" />
-              <path class="draw" pathLength="1" style="--d:0.8s" d="M260 186 C 262 150, 258 115, 260 82" />
-              <text class="lbl node-title" style="--d:0.9s" x="260" y="48">Funding</text>
-              <text class="lbl node-q" style="--d:0.9s" x="260" y="67">Who pays, and for what?</text>
-              <rect class="draw" pathLength="1" x="332" y="114" width="160" height="56" rx="6" style="--d:0.7s" />
-              <path class="draw" pathLength="1" style="--d:1.1s" d="M300 208 C 318 196, 335 184, 352 172" />
-              <text class="lbl node-title" style="--d:1.2s" x="412" y="138">Incentives</text>
-              <text class="lbl node-q" style="--d:1.2s" x="412" y="157">What moves people?</text>
-              <rect class="draw" pathLength="1" x="332" y="294" width="160" height="56" rx="6" style="--d:1.0s" />
-              <path class="draw" pathLength="1" style="--d:1.4s" d="M300 256 C 318 268, 335 280, 352 292" />
-              <text class="lbl node-title" style="--d:1.5s" x="412" y="318">Users</text>
-              <text class="lbl node-q" style="--d:1.5s" x="412" y="337">What do they need?</text>
-              <rect class="draw" pathLength="1" x="180" y="384" width="160" height="56" rx="6" style="--d:1.3s" />
-              <path class="draw" pathLength="1" style="--d:1.7s" d="M260 278 C 258 315, 262 350, 260 382" />
-              <text class="lbl node-title" style="--d:1.8s" x="260" y="408">Creators</text>
-              <text class="lbl node-q" style="--d:1.8s" x="260" y="427">What can be built?</text>
-              <rect class="draw" pathLength="1" x="28" y="294" width="160" height="56" rx="6" style="--d:1.6s" />
-              <path class="draw" pathLength="1" style="--d:2.0s" d="M220 256 C 202 268, 185 280, 168 292" />
-              <text class="lbl node-title" style="--d:2.1s" x="108" y="318">Rules</text>
-              <text class="lbl node-q" style="--d:2.1s" x="108" y="337">What is allowed?</text>
-              <rect class="draw" pathLength="1" x="28" y="114" width="160" height="56" rx="6" style="--d:1.9s" />
-              <path class="draw" pathLength="1" style="--d:2.3s" d="M220 208 C 202 196, 185 184, 168 172" />
-              <text class="lbl node-title" style="--d:2.4s" x="108" y="138">Evidence</text>
-              <text class="lbl node-q" style="--d:2.4s" x="108" y="157">What do we know?</text>
-              <path class="draw link" pathLength="1" style="--d:2.30s;--t:0.8s" d="M340 52 C 380 54, 405 80, 412 112" />
-              <path class="draw link" pathLength="1" style="--d:2.45s;--t:0.8s" d="M492 150 C 512 200, 512 264, 492 314" />
-              <path class="draw link" pathLength="1" style="--d:2.60s;--t:0.8s" d="M412 350 C 412 382, 385 410, 342 412" />
-              <path class="draw link" pathLength="1" style="--d:2.75s;--t:0.8s" d="M108 350 C 108 382, 135 410, 178 412" />
-              <path class="draw link" pathLength="1" style="--d:2.90s;--t:0.8s" d="M28 314 C 8 264, 8 200, 28 150" />
-              <path class="draw link" pathLength="1" style="--d:3.05s;--t:0.8s" d="M108 112 C 115 80, 140 54, 180 52" />
+              <rect class="draw" pathLength="1" x="180.0" y="26.0" width="160" height="56" rx="6" style="--d:0.4s" />
+              <path class="draw" pathLength="1" style="--d:0.8s" d="M260.0 186.0 L260.0 82.0" />
+              <text class="lbl node-title" style="--d:0.9s" x="260.0" y="50.0">Funding</text>
+              <text class="lbl node-q" style="--d:0.9s" x="260.0" y="69.0">Who pays, and for what?</text>
+              <rect class="draw" pathLength="1" x="334.2" y="115.0" width="160" height="56" rx="6" style="--d:0.7s" />
+              <path class="draw" pathLength="1" style="--d:1.1s" d="M299.8 209.0 L365.7 171.0" />
+              <text class="lbl node-title" style="--d:1.2s" x="414.2" y="139.0">Incentives</text>
+              <text class="lbl node-q" style="--d:1.2s" x="414.2" y="158.0">What moves people?</text>
+              <rect class="draw" pathLength="1" x="334.2" y="293.0" width="160" height="56" rx="6" style="--d:1.0s" />
+              <path class="draw" pathLength="1" style="--d:1.4s" d="M299.8 255.0 L365.7 293.0" />
+              <text class="lbl node-title" style="--d:1.5s" x="414.2" y="317.0">Users</text>
+              <text class="lbl node-q" style="--d:1.5s" x="414.2" y="336.0">What do they need?</text>
+              <rect class="draw" pathLength="1" x="180.0" y="382.0" width="160" height="56" rx="6" style="--d:1.3s" />
+              <path class="draw" pathLength="1" style="--d:1.7s" d="M260.0 278.0 L260.0 382.0" />
+              <text class="lbl node-title" style="--d:1.8s" x="260.0" y="406.0">Creators</text>
+              <text class="lbl node-q" style="--d:1.8s" x="260.0" y="425.0">What can be built?</text>
+              <rect class="draw" pathLength="1" x="25.8" y="293.0" width="160" height="56" rx="6" style="--d:1.6s" />
+              <path class="draw" pathLength="1" style="--d:2.0s" d="M220.2 255.0 L154.3 293.0" />
+              <text class="lbl node-title" style="--d:2.1s" x="105.8" y="317.0">Rules</text>
+              <text class="lbl node-q" style="--d:2.1s" x="105.8" y="336.0">What is allowed?</text>
+              <rect class="draw" pathLength="1" x="25.8" y="115.0" width="160" height="56" rx="6" style="--d:1.9s" />
+              <path class="draw" pathLength="1" style="--d:2.3s" d="M220.2 209.0 L154.3 171.0" />
+              <text class="lbl node-title" style="--d:2.4s" x="105.8" y="139.0">Evidence</text>
+              <text class="lbl node-q" style="--d:2.4s" x="105.8" y="158.0">What do we know?</text>
             </g>
           </svg>
           <figcaption>Funding, incentives, users, and creators each see a different problem. I work across all of them.</figcaption>
